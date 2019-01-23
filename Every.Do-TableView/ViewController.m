@@ -41,9 +41,9 @@
 {
     ToDoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"toDoCell" forIndexPath:indexPath];
     
-    ToDoData *oneTask = self.toDoList[indexPath.row];
+    ToDoData *oneTask = self.toDoList[indexPath.row];       // Setting each row of array into a variable to pass into a "configureCell" method
     
-    [cell configureCell:oneTask];
+    [cell configureCell:oneTask];       // "configureCell" is a custom method created in ToDoTableViewController
     
     return cell;
 }
@@ -52,12 +52,33 @@
     return self.toDoList.count;
 }
 
-// Mark:  Set up cell tap to details page
+// ============================== Mark:  Set up cell tap to details page ======================================================
 - (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"segueToDetailsPage" sender:nil];
     return YES;
 }
 
+// ============================== Mark: Set up NEW button to create new page ==================================================
+- (IBAction)newButton:(UIBarButtonItem *)sender {
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"segueToNew"]) {
+        AddNewViewController *newVC = (AddNewViewController *) segue.destinationViewController;
+        newVC.addNewDelegate = self;
+        // cast destinationVC as AddNewVC
+        // set delegate
+    }
+}
+
+// addNewVC.addNewDelegate = self;
+
+-(void)newTodo:(ToDoData *)toDo {
+    [self.toDoList addObject:toDo];
+    NSLog(@"New input saved");
+    [self.tableView reloadData];
+    // Add the todo to your list
+    // Reload your tableview (maybe needs to be done on the main thread)
+}
 
 
 @end

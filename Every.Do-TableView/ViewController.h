@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddNewViewController.h"
 
-@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, AddNewDelegate>
 
 @property (nonatomic, weak) id <UITableViewDelegate> tableViewDelegate;
 @property (nonatomic, weak) id <UITableViewDataSource> tableViewDataSource;

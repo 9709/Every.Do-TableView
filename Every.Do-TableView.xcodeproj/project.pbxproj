@@ -17,6 +17,7 @@
 		1705243821F799DB0075A5C8 /* Every_Do_TableViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1705243721F799DB0075A5C8 /* Every_Do_TableViewUITests.m */; };
 		1705244A21F7A2C50075A5C8 /* ToDoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1705244921F7A2C50075A5C8 /* ToDoTableViewCell.m */; };
 		1705244D21F7A8CA0075A5C8 /* ToDoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1705244C21F7A8CA0075A5C8 /* ToDoData.m */; };
+		1705245321F7FA4C0075A5C8 /* AddNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1705245221F7FA4C0075A5C8 /* AddNewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		1705244921F7A2C50075A5C8 /* ToDoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoTableViewCell.m; sourceTree = "<group>"; };
 		1705244B21F7A8CA0075A5C8 /* ToDoData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoData.h; sourceTree = "<group>"; };
 		1705244C21F7A8CA0075A5C8 /* ToDoData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoData.m; sourceTree = "<group>"; };
+		1705245121F7FA4C0075A5C8 /* AddNewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddNewViewController.h; sourceTree = "<group>"; };
+		1705245221F7FA4C0075A5C8 /* AddNewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddNewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				1705241721F799DB0075A5C8 /* ViewController.m */,
 				1705244821F7A2C50075A5C8 /* ToDoTableViewCell.h */,
 				1705244921F7A2C50075A5C8 /* ToDoTableViewCell.m */,
+				1705245121F7FA4C0075A5C8 /* AddNewViewController.h */,
+				1705245221F7FA4C0075A5C8 /* AddNewViewController.m */,
 				1705244B21F7A8CA0075A5C8 /* ToDoData.h */,
 				1705244C21F7A8CA0075A5C8 /* ToDoData.m */,
 				1705241921F799DB0075A5C8 /* Main.storyboard */,
@@ -273,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1705241821F799DB0075A5C8 /* ViewController.m in Sources */,
+				1705245321F7FA4C0075A5C8 /* AddNewViewController.m in Sources */,
 				1705244D21F7A8CA0075A5C8 /* ToDoData.m in Sources */,
 				1705242321F799DB0075A5C8 /* main.m in Sources */,
 				1705241521F799DB0075A5C8 /* AppDelegate.m in Sources */,
