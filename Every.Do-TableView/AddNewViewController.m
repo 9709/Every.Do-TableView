@@ -24,15 +24,13 @@
 
 
 - (IBAction)doneButtonPressed:(UIBarButtonItem *)sender {
-    //build a todo
     NSString *titleTextFieldStr = self.textField.text;
     NSString *previewTextFieldStr = self.previewTextField.text;
     NSString *priortyTextFieldStr = self.priorityTextField.text;
     
     ToDoData *titleToSave = [[ToDoData alloc] initWithTitle:titleTextFieldStr andToDoPreview:previewTextFieldStr andPriorityNumber:priortyTextFieldStr];
-    // Use actual data!! (from your text field)
     
-    [self.addNewDelegate newTodo:titleToSave];
+    [self.addNewDelegate newTodo:titleToSave]; // CALL THE DELEGATGE (phone call to the plumber)
     
     [self.navigationController popViewControllerAnimated: YES];
 }

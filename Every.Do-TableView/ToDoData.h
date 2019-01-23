@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *toDoPreview;
 @property (nonatomic) NSString *prioritiyNumber;
+@property BOOL isComplete;
 
 - (instancetype)initWithTitle: (NSString *)title andToDoPreview: (NSString *)toDoPreview andPriorityNumber: (NSString *)priorityNumber;
 

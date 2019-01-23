@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AddNewViewController.h"
 
-@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, AddNewDelegate>
+@interface ViewController : UIViewController /* THIS IS THE DELEGATE (plumber) */ <UITableViewDelegate, UITableViewDataSource, AddNewDelegate/* Conforming to the protocol (plumbing) */> 
 
 @property (nonatomic, weak) id <UITableViewDelegate> tableViewDelegate;
 @property (nonatomic, weak) id <UITableViewDataSource> tableViewDataSource;

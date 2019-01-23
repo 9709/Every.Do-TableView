@@ -25,6 +25,7 @@
     self.mainTask.text = task.title;
     self.previewLabel.text = task.toDoPreview;
     self.priorityLabel.text = task.prioritiyNumber;
+    self.accessoryType = task.isComplete ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
 }
 
 @end

@@ -19,9 +19,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AddNewViewController : UIViewController
+@interface AddNewViewController : UIViewController // THIS IS THE DELEGATOR (client)
 
-@property (nonatomic) id <AddNewDelegate> addNewDelegate;
+@property (nonatomic) id <AddNewDelegate> addNewDelegate; // THIS IS THE DELGATE PROPERTY (business card holder)
 
 @end
 

@@ -17,6 +17,7 @@
         _title = title;
         _toDoPreview = toDoPreview;
         _prioritiyNumber = priorityNumber;
+        _isComplete = NO;
     }
     return self;
 }

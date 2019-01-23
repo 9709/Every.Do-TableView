@@ -15,6 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) NSMutableArray *toDoList;
+@property (nonatomic) ToDoTableViewCell *tableViewCell;
 
 @end
 
@@ -78,6 +79,19 @@
     [self.tableView reloadData];
     // Add the todo to your list
     // Reload your tableview (maybe needs to be done on the main thread)
+}
+
+
+// Swipe left to mark as complete
+- (IBAction)swipeLeft:(UISwipeGestureRecognizer *)sender {
+    NSLog(@"Swipped Left");
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:[sender locationInView:self.tableView]];
+    ToDoData *setComplete = self.toDoList[indexPath.row];
+    setComplete.isComplete = YES;
+    [[self.tableView cellForRowAtIndexPath:indexPath] configureCell: setComplete];
+
+    // Set isComplete on the ToDoData for that row (indexPath.row)
+    // Reload Tableview
 }
 
 
