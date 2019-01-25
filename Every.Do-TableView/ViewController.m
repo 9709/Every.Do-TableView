@@ -42,9 +42,12 @@
 {
     ToDoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"toDoCell" forIndexPath:indexPath];
     
-    ToDoData *oneTask = self.toDoList[indexPath.row];       // Setting each row of array into a variable to pass into a "configureCell" method
+    ToDoData *task = self.toDoList[indexPath.row];       // Setting each row of array into a variable to pass into a "configureCell" method
     
-    [cell configureCell:oneTask];       // "configureCell" is a custom method created in ToDoTableViewController
+//    cell.mainTask.text = task.title;
+//    cell.previewLabel.text = task.toDoPreview;
+//    cell.priorityLabel.text = task.prioritiyNumber;
+    [cell configureCell:task];       // "configureCell" is a custom method created in ToDoTableViewController
     
     return cell;
 }
